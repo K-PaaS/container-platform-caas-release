@@ -1,4 +1,4 @@
-# PaaS-TA 컨테이너 플랫폼 릴리즈
+# 컨테이너 플랫폼 릴리즈
 ## 소개
 컨테이너 플랫폼을 위한 Back-end Service를 한번에 설치 할 수 있도록 구성해 놓은 Bosh 릴리즈를 말한다. 릴리즈를 다운로드하고 생성하는 방법에 대해 기술하였다.
 
@@ -8,20 +8,20 @@
   - private-image-repository :: 1 machine
 
 ### 릴리즈 생성  
-  - PaaS-TA 컨테이너 플랫폼 릴리즈를 다운로드 한다.    
+  - 컨테이너 플랫폼 릴리즈를 다운로드 한다.    
     ```
-    $ git clone https://github.com/PaaS-TA/paas-ta-container-platform-release.git
-    $ cd paas-ta-container-platform-release
+    $ git clone https://github.com/K-PaaS/container-platform-caas-release.git
+    $ cd container-platform-caas-release
     ```
     
   - 다운로드 받은 source file을 src 디렉토리에 복사한다. 
     ```
     ## download source files   
-    $ wget --content-disposition https://nextcloud.paas-ta.org/index.php/s/4wpB5r58d8z8TPi/download
+    $ wget --content-disposition https://nextcloud.paas-ta.org/index.php/s/4wpB5r58d8z8TPi/download    
 
     ## unzip download source files   
     $ mkdir src
-    $ tar -zxvf paasta-container-platform-src-1.0.tar.gz -C src  
+    $ tar -zxvf container-platform-src-1.0.tar.gz -C src  
     
     ## final src directory   
     src
@@ -46,15 +46,15 @@
         └── upstart_1.13.2-0ubuntu21_amd64.deb
     ```
    
-  - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성한다.    
+  - 컨테이너 플랫폼 릴리즈를 생성한다.    
     ```
     ## <VERSION> :: release version (ex : 1.0)  
-    ## <RELEASE_TARBALL_PATH> :: release file path (ex : ./paasta-container-platform-1.0.tgz)         
-    $ bosh -e <bosh_name> create-release --name=paasta-container-platform --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
+    ## <RELEASE_TARBALL_PATH> :: release file path (ex : ./container-platform-1.0.tgz)         
+    $ bosh -e <bosh_name> create-release --name=container-platform --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
     ```   
 
 ## 메인
-- https://github.com/PaaS-TA/paas-ta-container-platform
+- https://github.com/K-PaaS/container-platform
 
 ## 라이선스 
 [Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용한다.

@@ -105,12 +105,12 @@ CREATE TABLE `cp_limit_ranges`  (
 -- ----------------------------
 -- Records of cp_limit_ranges
 -- ----------------------------
-INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (1, '100m', '-', '-', '-', 'paas-ta-container-platform-low-limit-range', 'cpu', 'Container', '2020-11-05 13:26:24');
-INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (2, '500Mi', '-', '-', '-', 'paas-ta-container-platform-low-limit-range', 'memory', 'Container', '2020-11-05 13:27:24');
-INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (3, '300m', '-', '-', '-', 'paas-ta-container-platform-medium-limit-range', 'cpu', 'Container', '2020-11-05 13:27:59');
-INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (4, '1500Mi', '-', '-', '-', 'paas-ta-container-platform-medium-limit-range', 'memory', 'Container', '2020-11-05 13:27:59');
-INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (5, '900m', '-', '-', '-', 'paas-ta-container-platform-high-limit-range', 'cpu', 'Container', '2020-11-05 13:27:59');
-INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (6, '3Gi', '-', '-', '-', 'paas-ta-container-platform-high-limit-range', 'memory', 'Container', '2020-11-05 13:27:59');
+INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (1, '100m', '-', '-', '-', 'container-platform-low-limit-range', 'cpu', 'Container', '2020-11-05 13:26:24');
+INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (2, '500Mi', '-', '-', '-', 'container-platform-low-limit-range', 'memory', 'Container', '2020-11-05 13:27:24');
+INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (3, '300m', '-', '-', '-', 'container-platform-medium-limit-range', 'cpu', 'Container', '2020-11-05 13:27:59');
+INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (4, '1500Mi', '-', '-', '-', 'container-platform-medium-limit-range', 'memory', 'Container', '2020-11-05 13:27:59');
+INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (5, '900m', '-', '-', '-', 'container-platform-high-limit-range', 'cpu', 'Container', '2020-11-05 13:27:59');
+INSERT INTO `cp_limit_ranges`(`id`, `default_limit`, `default_request`, `max`, `min`, `name`, `resource`, `type`, `created`) VALUES (6, '3Gi', '-', '-', '-', 'container-platform-high-limit-range', 'memory', 'Container', '2020-11-05 13:27:59');
 
 -- ----------------------------
 -- Table structure for cp_resource_quotas
@@ -131,9 +131,9 @@ CREATE TABLE `cp_resource_quotas`  (
 -- ----------------------------
 -- Records of cp_resource_quotas
 -- ----------------------------
-INSERT INTO `cp_resource_quotas`(`id`, `limit_cpu`, `limit_memory`, `name`, `request_cpu`, `request_memory`, `status`, `created`) VALUES (1, '2', '2Gi', 'paas-ta-container-platform-low-rq', '-', '-', '{\"cpu\":{\"used\":\"200m\",\"hard\":\"2\"}, \"memory\":{\"used\":\"1800Mi\",\"hard\": \"2Gi\"}}', '2020-11-05 13:26:24');
-INSERT INTO `cp_resource_quotas`(`id`, `limit_cpu`, `limit_memory`, `name`, `request_cpu`, `request_memory`, `status`, `created`) VALUES (2, '4', '6Gi', 'paas-ta-container-platform-medium-rq', '-', '-', '{\"cpu\":{\"used\":\"200m\",\"hard\":\"4\"}, \"memory\":{\"used\":\"1800Mi\",\"hard\": \"6Gi\"}}', '2020-11-05 13:26:24');
-INSERT INTO `cp_resource_quotas`(`id`, `limit_cpu`, `limit_memory`, `name`, `request_cpu`, `request_memory`, `status`, `created`) VALUES (3, '8', '12Gi', 'paas-ta-container-platform-high-rq', '-', '-', '{\"cpu\":{\"used\":\"200m\",\"hard\":\"8\"}, \"memory\":{\"used\":\"1800Mi\",\"hard\": \"12Gi\"}}', '2020-11-05 13:26:24');
+INSERT INTO `cp_resource_quotas`(`id`, `limit_cpu`, `limit_memory`, `name`, `request_cpu`, `request_memory`, `status`, `created`) VALUES (1, '2', '2Gi', 'container-platform-low-rq', '-', '-', '{\"cpu\":{\"used\":\"200m\",\"hard\":\"2\"}, \"memory\":{\"used\":\"1800Mi\",\"hard\": \"2Gi\"}}', '2020-11-05 13:26:24');
+INSERT INTO `cp_resource_quotas`(`id`, `limit_cpu`, `limit_memory`, `name`, `request_cpu`, `request_memory`, `status`, `created`) VALUES (2, '4', '6Gi', 'container-platform-medium-rq', '-', '-', '{\"cpu\":{\"used\":\"200m\",\"hard\":\"4\"}, \"memory\":{\"used\":\"1800Mi\",\"hard\": \"6Gi\"}}', '2020-11-05 13:26:24');
+INSERT INTO `cp_resource_quotas`(`id`, `limit_cpu`, `limit_memory`, `name`, `request_cpu`, `request_memory`, `status`, `created`) VALUES (3, '8', '12Gi', 'container-platform-high-rq', '-', '-', '{\"cpu\":{\"used\":\"200m\",\"hard\":\"8\"}, \"memory\":{\"used\":\"1800Mi\",\"hard\": \"12Gi\"}}', '2020-11-05 13:26:24');
 
 -- ----------------------------
 -- Table structure for cp_users
